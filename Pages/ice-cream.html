@@ -4,6 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice-Creams</title>
+    <style>
+        .main{
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+       @font-face {
+        font-family: myfont;
+        src: url(../fonts/RubikDoodleShadow-Regular.ttf);
+       }
+       @font-face {
+        font-family: fonty;
+        src: url(../fonts/Exo-VariableFont_wght.ttf);
+       }
+       
+       .card-main{
+            position: relative;
+            width: 250px;
+            height: 320px;
+         
+        }   
+        .the-card{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 0.6s ease;
+            
+            /* background-color: yellow; */
+        }
+        .the-card:hover{
+            transform: rotateY(180deg);
+        }
+        .card-front{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            color: white;
+            background-color: chocolate;
+            background-image: url(../Images/ice-cream-black.jpg) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            border-radius: 10px;
+            background-color: rgba(28, 28, 28, 0.9);
+            /* background-position-y: 100px ; */
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;   
+            
+        }
+        .card-back{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            color: white;
+            /* background-color: chocolate; */
+            background-image: url(../Images/ice-cream-black.jpg) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            transform: rotateY(180deg);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        .back-bground{
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background: linear-gradient(rgba(44, 44, 44, 0.8), rgba(3, 3, 3, 0.8), rgba(40, 39, 39, 0.8));
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+        .heading{
+            font-size: 30px;
+            /* transform: rotateZ(-90deg); */
+           font-family: myfont;
+        }
+        h1{
+            font-family: fonty;
+        }
+        /* =====================foter---- */
+        .footer{
+            width: 100%;
+            height: 40px;
+            background-color: grey;
+            margin-top: 40px;
+            border-radius: 20px;
+        }
+        .button{
+            width: 120px;
+            height: 30px;
+            margin-top: 5px;
+            border-radius: 10px;
+            border: 0px;
+            background-color: greenyellow;
+            font-family: fonty;
+            font-weight: bold;
+            color: rgb(80, 80, 80);
+        }
+        .button:hover{
+            background-color: rgb(83, 211, 19);
+            color: white;
+            transition: 0.4s ease;
+        }
+    </style>
 </head>
 <center>
 <body>
@@ -13,7 +126,39 @@
         </figcaption>
     </figure>
 
-    <h3>Ice-Creams Items<ul></h3>
+
+    <div class="main">
+        <div class="card-main">
+            <div class="the-card">
+                <div class="card-front"><p class="heading">CHOCOLATE</p></div>
+                <div class="card-back"><div class="back-bground"><h3>Half</h3><p>Rs 250 Only</p> <h3>Full</h3><p>Rs 250 Only</p></div></div>
+            </div>
+        </div>
+    <!-- ===========================================malai tikka================= -->
+    <div class="card-main">
+    <div class="the-card">
+        <div class="card-front"><p class="heading">VANILA</p></div>
+        <div class="card-back"><div class="back-bground"><h3>Half</h3><p>Rs 250 Only</p> <h3>Full</h3><p>Rs 250 Only</p></div></div>
+    </div>
+    </div>
+    <!-- -=======malai tikkah end====== -->
+    <!-- =====================Green-Tikkah================== -->
+    <div class="card-main">
+    <div class="the-card">
+        <div class="card-front"><p class="heading">CRUNCHY</p></div>
+        <div class="card-back"><div class="back-bground"><h3>Half</h3><p>Rs 250 Only</p> <h3>Full</h3><p>Rs 250 Only</p></div></div>
+    </div>
+    </div>
+    <!-- =============Green-Tikka=========================== -->
+        <!-- --------------------- -->
+    </div>
+    
+    
+    
+    
+    
+            <div class="footer"><a href="../index.html"  title="Back To Main"><Button class="button">Goback</Button></a></div>
+    <!-- <h3>Ice-Creams Items<ul></h3>
     <li class="M-list-hd">Chocolate<ul>
         Full rs.111 Half rs.66
     </ul></li>
@@ -24,7 +169,7 @@
         Full rs.111 Half rs.66
     </ul></li>
     </ul>
-    <a href="../index.html"  title="ToMain"><button class="button">Goback</button></a>
+    <a href="../index.html"  title="ToMain"><button class="button">Goback</button></a> -->
 </body>
 </center>
 </html>

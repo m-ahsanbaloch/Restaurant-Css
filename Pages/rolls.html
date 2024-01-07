@@ -1,20 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rolls</title>
-</head>
-<center>
+    <style>
+      .main {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      @font-face {
+        font-family: myfont;
+        src: url(../fonts/RubikDoodleShadow-Regular.ttf);
+      }
+      @font-face {
+        font-family: fonty;
+        src: url(../fonts/Exo-VariableFont_wght.ttf);
+      }
 
+      .card-main {
+        position: relative;
+        width: 250px;
+        height: 320px;
+      }
+      .the-card {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.6s ease;
+
+        /* background-color: yellow; */
+      }
+      .the-card:hover {
+        transform: rotateY(180deg);
+      }
+      .card-front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        color: white;
+        background-color: chocolate;
+        background-image: url(../Images/roll.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        border-radius: 10px;
+        background-color: rgba(28, 28, 28, 0.9);
+        background-position-y: 100px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        color: white;
+        /* background-color: chocolate; */
+        background-image: url(../Images/roll.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        transform: rotateY(180deg);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      .back-bground {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background: linear-gradient(
+          rgba(44, 44, 44, 0.8),
+          rgba(3, 3, 3, 0.8),
+          rgba(40, 39, 39, 0.8)
+        );
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+      }
+      .heading {
+        font-size: 30px;
+        /* transform: rotateZ(-90deg); */
+        font-family: myfont;
+      }
+      h1 {
+        font-family: fonty;
+      }
+      /* =====================foter---- */
+      .footer {
+        width: 100%;
+        height: 40px;
+        background-color: grey;
+        margin-top: 40px;
+        border-radius: 20px;
+      }
+      .button {
+        width: 120px;
+        height: 30px;
+        margin-top: 5px;
+        border-radius: 10px;
+        border: 0px;
+        background-color: greenyellow;
+        font-family: fonty;
+        font-weight: bold;
+        color: rgb(80, 80, 80);
+      }
+      .button:hover {
+        background-color: rgb(83, 211, 19);
+        color: white;
+        transition: 0.4s ease;
+      }
+    </style>
+  </head>
+  <center>
     <body>
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/M328g44dEtE?si=RdK1DXsiFlvGEhYm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <figcaption>
-                <h1>Rolls</h1>
-            </figcaption>
-        </figure>
-        <h3>Roll Items<ul>
+      <iframe
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/M328g44dEtE?si=RdK1DXsiFlvGEhYm"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <figcaption>
+        <h1>Rolls</h1>
+      </figcaption>
+
+      <div class="main">
+        <div class="card-main">
+          <div class="the-card">
+            <div class="card-front">
+              <p class="heading">CHICKEN ZINGER ROLL</p>
+            </div>
+            <div class="card-back">
+              <div class="back-bground">
+                <h3>Price</h3>
+                <p>Rs 240 Only</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===========================================malai tikka================= -->
+        <div class="card-main">
+          <div class="the-card">
+            <div class="card-front"><p class="heading">CHICKEN CHATNI</p></div>
+            <div class="card-back">
+              <div class="back-bground">
+                <h3>Price</h3>
+                <p>Rs 170 Only</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- -=======malai tikkah end====== -->
+        <!-- =====================Green-Tikkah================== -->
+        <div class="card-main">
+          <div class="the-card">
+            <div class="card-front"><p class="heading">CHICKEN BIHARI</p></div>
+            <div class="card-back">
+              <div class="back-bground">
+                <h3>Price</h3>
+                <p>Rs 170 Only</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- =============Green-Tikka=========================== -->
+        <!-- --------------------- -->
+      </div>
+
+      <div class="footer">
+        <a href="../index.html" title="Back To Main"
+          ><button class="button">Goback</button></a
+        >
+      </div>
+      <!-- <h3>Roll Items<ul>
         </h3>
         <li class="M-list-hd">Chicken Chatni <ul>
                 rs.140
@@ -33,8 +206,7 @@
             </ul>
         </li>
         <a href="../index.html"  title="ToMain"><button class="button">GoBack</button></a>
-        </ul>
+        </ul> -->
     </body>
-</center>
-
+  </center>
 </html>
