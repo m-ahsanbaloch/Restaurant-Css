@@ -1,6 +1,9 @@
-body {
+
+.mainpage{
   background-color: #009688;
   width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 .name {
   text-transform: uppercase;
@@ -27,12 +30,14 @@ a {
   text-align: center;
 }
 .hd1 img {
+  margin-top: 20px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-bottom: 10px;
+  line-height: 40px;
+
 }
 .hd2 {
   width: 20%;
@@ -45,6 +50,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  line-height: 40px;
 }
 .hd3 {
   width: 20%;
@@ -57,6 +63,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  line-height: 40px;
 }
 .hd4 {
   width: 20%;
@@ -69,6 +76,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  line-height: 40px;
 }
 .hd5 {
   width: 20%;
@@ -81,6 +89,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  line-height: 40px;
 }
 .hd6 {
   width: 20%;
@@ -93,6 +102,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  line-height: 40px;
 }
 .hd7 {
   width: 20%;
@@ -105,6 +115,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  line-height: 40px;
 }
 .hd8 {
   width: 20%;
@@ -117,6 +128,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
 }
 .hd9 {
   width: 20%;
@@ -129,6 +141,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  line-height: 40px;
 }
 .hd10 {
   width: 20%;
@@ -141,6 +154,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 h1 {
   color: rgb(214, 214, 214);
@@ -150,7 +164,7 @@ a {
 }
 a:hover {
   color: yellow;
-  transition: ease-in-out 0.6s;
+  transition: ease-in-out 0.3s all;
 }
 body {
   background-color: #009688;
@@ -169,15 +183,84 @@ h3 {
   border-color: rgb(196, 196, 196);
   color: rgb(54, 54, 54);
 }
-.animate__heartBeat {
+/* .animate__heartBeat {
   animation-iteration-count: 1000;
   transition: 0.6s ease-in-out;
   animation-duration: 5s;
-}
+} */
 .contact{
+
+  border-radius: 20px;
+  width: 100%;
+  height: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   font-size: larger;
   font-weight: bold;
   font-size: 22px;
 }
+
+.maincardn {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+}
+.thecardn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+  animation-name: flip;
+  animation-duration:12s;
+  animation-timing-function: all ease-out;
+  animation-iteration-count: infinite;
+}
+.maincard {
+  position: relative;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  left: 50px;
+}
+.thecard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.9s ease;
+
+}
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: blue; */
+  backface-visibility: hidden;
+}
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  /* background-color: red; */
+  backface-visibility: hidden;
+}
+@font-face {
+  font-family: myfont;
+  src: url(fonts/Exo-VariableFont_wght.ttf);
+}
+.rname{
+  font-family: myfont;
+  transform:scaleY(600px);
+  font-size: 40px;
+  color: rgb(203, 243, 24);
+}
+@keyframes flip {
+from {transform: rotateY(0deg);}
+to {transform: rotateY(360deg);}}
